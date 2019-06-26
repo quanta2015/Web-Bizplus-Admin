@@ -1,0 +1,157 @@
+@main-color: #5755d9;
+
+.g-job {
+    
+
+    .m-job-wrap {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+
+   .m-add {
+      display: inline-block;
+      background: #ff0000;
+      color: #fff;
+      width: 60px;
+      text-align: center;
+      margin: 0 0 0 10px;
+      cursor: pointer;
+      border-radius: 2px;
+      height: 24px;
+      box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+
+    .m-job-type {
+      width: 100%;
+      height: 35px;
+      background: #0274cc;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+      color: #fff;
+  }
+
+  .m-job-item {
+    background: #fff;
+    margin: 0 0 15px 0;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+    width: calc( (100% - 15px)/2 );
+    position: relative;
+  }
+
+  .m-job-item>span {
+    padding: 0 5px;
+    display: block;
+    position: relative;
+  }
+
+  .m-job-item>span>input {
+    margin: 0 0 5px 0;
+  }
+
+  .m-job-item:nth-child(2n) {
+      margin-left: 15px;
+  }
+
+
+  .m-job-item>h1>input {
+    background: #666;
+    color: #fff;
+    border: none;
+  }
+
+  .m-job-item > h1 > input:focus {
+    background: #fff;
+    color: #333;
+  }
+
+  .m-job-item:hover .m-del {
+    display: block;
+  }
+
+  .m-job-item>h1 {
+    display: flex;
+    align-items: center;
+    background: #666;
+    padding: 5px 15px 5px 5px;
+  }
+  
+
+  .m-qual {
+    flex: 1;
+    margin-bottom: 15px;
+    flex: 1 1;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 3px rgba(0,0,0,.1);
+    background: #fff;
+    padding: 5px;
+  }
+
+  .m-qual>span {
+    position: relative;
+    display: block;
+  }
+
+  .m-give {
+      flex: 1;
+  }
+
+
+
+  .m-job-del {
+    position: absolute;
+    height: 14px;
+    width: 14px;
+    border-radius: 7px;
+    background: #ff0000;
+    right: 5px;
+    top: 8px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+    color: #fff;
+  }
+
+  .m-job-item:hover i,.m-qual:hover i {
+    display: block;
+  }
+
+  .m-job-item:hover>span>input,.m-qual:hover>span>input {
+      width: calc( 100% - 20px );
+  }
+
+
+  .m-job-del:before, .m-job-del:after {
+      content: ' ';
+      position: absolute;
+      right: 6px;
+      top: 3px;
+      border-left: 2px solid #eee;
+      height: 9px;
+      width: 0;
+  }
+
+  .m-job-del:before {
+    transform: rotate(45deg);
+  }
+
+  .m-job-del:after {
+    transform: rotate(-45deg);
+  }
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+

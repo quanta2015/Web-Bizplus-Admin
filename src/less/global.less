@@ -1,0 +1,38 @@
+.main-content-card {
+  min-height: 100%;
+}
+
+
+.m-del {
+  position: absolute;
+  height: 26px;
+  width: 26px;
+  border-radius: 15px;
+  background: #ff0000;
+  right: -13px;
+  top: -13px;
+  cursor: pointer;
+  transition: .5s;
+  display: none;
+  z-index: 999;
+  color: #fff;
+}
+
+
+.m-del:before,.m-del:after {
+  content: ' ';
+  position: absolute;
+  right: 12px;
+  top: 5px;
+  border-left: 2px solid #eee;
+  height: 15px;
+  width: 0;
+}
+
+.m-del:before {
+  transform: rotate(45deg);
+}
+
+.m-del:after {
+  transform: rotate(-45deg);
+}

@@ -1,0 +1,143 @@
+@import '../../less/variables.less';
+
+.logo {
+  height: 50px;
+  line-height: 50px;
+  position: relative;
+  padding-left: 20px;
+  overflow: hidden;
+  background: #001529;
+  transition: all .3s;
+
+  a {
+    background-color: transparent;
+    color: #5755d9;
+    cursor: pointer;
+    outline: none;
+    text-decoration: none;
+    transition: color .3s;
+  }
+
+  img {
+    display: inline-block;
+    height: 32px;
+    vertical-align: middle;
+  }
+
+  h1 {
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 0 0 12px;
+    vertical-align: middle;
+  }
+}
+
+
+.dashboard {
+  min-height: 100vh;
+  min-width: 1000px;
+}
+
+.header {
+  position: relative;
+  height: 50px;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0,21,41,.08);
+  line-height: 50px;
+  z-index: 10;
+}
+
+.header-left>button {
+    margin: 0 0 0 20px;
+    width: 100px;
+}
+
+.header-left {
+    flex: 1 1;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+  text-align: right;
+  height: 50px;
+  padding-right: 20px;
+
+  a {
+    transition: .3s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, .5)
+    }
+  }
+}
+
+.trigger {
+  font-size: 20px;
+  line-height: 50px;
+  height: 50px;
+  padding: 6px 24px;
+  cursor: pointer;
+  transition: all .3s,padding 0s;
+}
+
+.account {
+  cursor: pointer;
+  display: inline-block;
+  line-height: 50px;
+  height: 100%;
+  padding: 0 12px;
+  transition: all .3s;
+
+  &:hover {
+    background: rgba(242, 242, 242, 0.65);
+  }
+}
+
+.avatar {
+  background: @main-color;
+  width: 24px;
+  height: 24px;
+  margin: 10px 10px 10px 0;
+  vertical-align: middle;
+}
+
+.userinfo {
+  margin-top: 14px;
+}
+
+.content {
+  margin: 10px;
+}
+
+:global {
+  .ant-modal-confirm-btns {
+    margin-top: 0!important;
+  }
+}
+
+
+.dashboard .header .m-lang {
+    display: flex;
+    height: 30px;
+}
+
+.m-lang>span {
+    display: flex;
+    margin: 0 1px;
+    color: #fff;
+    background: #999;
+    width: 30px;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.m-lang>.active {
+    background: #0274cc;
+    
+}
