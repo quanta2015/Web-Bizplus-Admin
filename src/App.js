@@ -14,6 +14,7 @@ import project  from 'app/project'
 import edu      from 'app/edu'
 import job      from 'app/job'
 import contract from 'app/contract'
+import config   from 'app/config'
 
 @inject('userActions')
 @observer
@@ -43,6 +44,7 @@ class App extends React.Component {
                   <Route exact path='/edu'     component={edu}/>
                   <Route exact path='/job'     component={job}/>
                   <Route exact path='/contract'component={contract}/>
+                  <Route exact path='/config'  component={config}/>
                 </Switch>
               </Dashboard>
             </div>

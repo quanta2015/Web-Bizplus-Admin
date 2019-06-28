@@ -31,7 +31,11 @@ let menu = [
         path:'/contract',
         icon:'environment',
         title:'交通方式'
-      },
+      },{
+        path:'/config',
+        icon:'setting',
+        title:'邮件转发'
+      }
     ]
 
 

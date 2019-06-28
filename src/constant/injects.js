@@ -6,6 +6,8 @@ import styleActions    from 'model/style/action'
 import eduActions      from 'model/edu/action'
 import jobActions      from 'model/job/action'
 import contractActions from 'model/contract/action'
+import configActions   from 'model/config/action'
+
 
 export default {
   userStore,
@@ -16,4 +18,5 @@ export default {
   eduActions,
   jobActions,
   contractActions,
+  configActions,
 }

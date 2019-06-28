@@ -21,8 +21,10 @@ class UserActions extends BaseActions {
   @action
   async saveAll() {
     let langdb = clone(this.store.user.langdb)
+    let config = clone(this.store.user.config)
     let params = {
-      langdb: langdb
+      langdb: langdb,
+      config: config
     }
     let r = await this.post(urls.API_SAVE_ALL, params, true)
     if (r && r.code === 200) {
@@ -36,15 +38,18 @@ class UserActions extends BaseActions {
     if (r && r.code === 200) {
       let token = r.data.token
       let langdb = r.data.langdb
+      let config = r.data.config
       jwt.saveToken(token)
       jwt.saveLangdb(langdb)
+      jwt.saveConfig(config)
 
       const data = jwt.decodeToken()
       this.store.user = {
         usr: data.usr,
         pwd: data.pwd,
         token: jwt.getToken(),
-        langdb: langdb
+        langdb: langdb,
+        config: config
       }
     }
     return r
@@ -54,6 +59,7 @@ class UserActions extends BaseActions {
   async logout() {
     this.store.user = null
     jwt.removeToken()
+    jwt.removeConfig()
   }
 
 
@@ -68,13 +74,15 @@ class UserActions extends BaseActions {
     let r = await this.post(urls.API_USER_LOGIN, params, true)
     if (r && r.code === 200) {
       jwt.saveLangdb(r.data.langdb)
-
+      jwt.saveConfig(r.data.config)
+      
       runInAction(() => {
         this.store.user = {
           usr: data.usr,
           pwd: data.pwd,
           token: data.token,
-          langdb: r.data.langdb
+          langdb: r.data.langdb,
+          config: r.data.config
         }
       })
     }
