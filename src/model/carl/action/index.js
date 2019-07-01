@@ -36,7 +36,16 @@ class UserActions extends BaseActions {
 
   @action
   async uploadImg(file,id,type) {
-    let blob = await fileToBlob(file,600,300,0.35)
+    let config = { w:0, h:0, p: 0.35 }
+    if ( type === 'imgw') {
+      config.w = 1920
+      config.h = 1080
+    }else{
+      config.w = 1080
+      config.h = 1080
+    }
+
+    let blob = await fileToBlob(file,config.w,config.h,config.p)
     let lang = this.store.cur
     let forms = new FormData()
     forms.append('file',blob,'upload.jpg')

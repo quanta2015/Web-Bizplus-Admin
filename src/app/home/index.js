@@ -34,7 +34,7 @@ class Home extends React.Component {
     if (e.currentTarget.files.length < 1) return;
     var id   = e.currentTarget.parentNode.parentNode.parentNode.attributes['data-id'].value
     var type = e.currentTarget.attributes['data-type'].value
-    console.log(`${id} - ${type} `)
+    // console.log(`${id} - ${type} `)
 
     var file = e.currentTarget.files[0]
     let r = await this.actions.uploadImg(file,id,type)
